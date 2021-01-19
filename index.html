@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="nav">
+                <a class="a active" href="#">HOME</a>
+                <a class="b" href="#">SELF INTRO</a>
+                <a class="c" href="#">GALLERY</a>
+                <a class="d" href="#">CONTACT</a>
+            </div>
+        <div class="content">
+        <div class="home">
+            <h1><u>I am Bornona Probenee</u></h1>
+            <h3>Student of CSE,AUST</h3>
+        </div>
+        <div class="selfIntro">
+            <p>I am Bornona Probenee.<br>
+                I am a student of Ahsanullah University of Science and Technology.
+            I got adimitted in spring 2018.Now i am in 3rd year 
+            1st sesmester.</p>
+            <a href="http://www.aust.edu/"><u>Aust</u></a>
+        </div>
+        <div class="gallery">
+            <div class="image">
+                <img src="images/1.png"/>
+            </div>
+            <div class="image">
+                <img src="images/2.jpg"/>
+            </div>
+            <div class="image">
+                <img src="images/3.jpg"/>
+            </div>
+            <div class="image">
+                <img src="images/4.png"/>
+            </div>
+            <div class="image">
+                <img src="images/5.jpg"/>
+            </div>
+            <div class="image">
+                <img src="images/6.jpg"/>
+            </div>
+            <div class="image">
+                <img src="images/7.jpg"/>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contactform">
+                <form action="" method ="post">
+                    <input type="text" name="" class="inputtext" value="First Name">
+                    <input type="text" name="" class="inputtext" value="Last Name">
+                    <input type="email" name="" class="inputtext" value="Email Address">
+                    <textarea cols="6" rows="6" class="inputmessage">Your Message....</textarea>
+                    <input type="button" name="" class="submitbutton" value="Submit">
+                </form>
+            </div>
+        </div>
+        </div>
+      <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('a').click(function(){
+               // alert("i am click");
+               var selected =$(this);
+               $('a').removeClass('active');
+               $(selected).addClass('active');
+            });
+            var $a=$('.a');
+            $b=$('.b');
+            $c=$('.c');
+            $d=$('.d');
+            $home=$('.home');
+            $selfIntro=$('.selfIntro');
+            $sgallery=$('.gallery');
+            $contact=$('.contact');
+            $a.click(function(){
+                $home.fadeIn();
+                $selfIntro.fadeOut();
+                $sgallery.fadeOut();
+                $contact.fadeOut();
+            });
+            $b.click(function(){
+                $selfIntro.fadeIn();
+                $home.fadeOut();
+                $sgallery.fadeOut();
+                $contact.fadeOut();
+            });
+            $c.click(function(){
+                $sgallery.fadeIn();
+                $selfIntro.fadeOut();
+                $home.fadeOut();
+                $contact.fadeOut();
+            });
+            $d.click(function(){
+                $contact.fadeIn();
+                $selfIntro.fadeOut();
+                $sgallery.fadeOut();
+                $home.fadeOut();
+            });
+        });
+        </script>
+    </body>
+</html>
